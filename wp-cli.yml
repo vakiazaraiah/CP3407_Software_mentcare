@@ -1,0 +1,4 @@
+require:
+  - wp-cli/browse-command.php
+@mentcare.test:
+  ssh: vagrant:mentcare.test:/var/www/html
