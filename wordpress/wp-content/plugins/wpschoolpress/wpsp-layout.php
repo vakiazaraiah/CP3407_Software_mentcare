@@ -89,7 +89,7 @@ function wpsp_topbar(){
       </a>
       <div class="wpsp-head">
       <div class="wpsp-menuIcon"><span></span></div>
-      <h3 class="wpsp-customeMsg">“Live as if you were to die tomorrow. Learn as if you were to live forever.”</h3>
+      <h3 class="wpsp-customeMsg">“We care for you.”</h3>
 
       <div class="wpsp-righthead">
         <div class="wpsp-head-action"></div>
@@ -1161,7 +1161,7 @@ if(isset($_GET['cid'])){
 function wpsp_body_end()
 {
   echo "<footer class='wpsp-footer'>
-        <p>Copyright &copy;".date('Y')." <a href='http://wpschoolpress.com' target='_blank'>WPSchoolPress</a>. All rights reserved. <span class='wpsp-right'>WPSchoolPress Version ".WPSP_PLUGIN_VERSION."</span></p></footer>
+        <p>Copyright &copy;".date('Y')." All rights reserved. <span class='wpsp-right'>Mentcare".WPSP_PLUGIN_VERSION."</span></p></footer>
     <!-- Control Sidebar -->
     </section><!-- /.wpsp-container -->
   </div><!-- /.wpsp-wrapper -->

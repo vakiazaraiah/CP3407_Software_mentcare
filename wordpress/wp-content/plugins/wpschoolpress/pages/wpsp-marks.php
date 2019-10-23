@@ -426,7 +426,7 @@ $marktable  =   $wpdb->prefix."wpsp_mark";
 
 				<div class="wpsp-card">
 						<div class="wpsp-card-head">
-								<h3 class="wpsp-card-title">Your Marks</h3>
+								<h3 class="wpsp-card-title">Your Progress</h3>
 						</div>
 						<div class="wpsp-card-body">
 								<div class="gap-top-bottom">
