@@ -135,9 +135,9 @@ function wpsp_sidebar(){
   
     if($current_user_role=='administrator' || $current_user_role=='teacher'){
     switch( $page ){
-      case 'dashboard':
-      $dashboard_page="active";
-      break;
+      // case 'dashboard':
+      // $dashboard_page="active";
+      // break;
       case 'messages':
       $message_page="active";
       break;
