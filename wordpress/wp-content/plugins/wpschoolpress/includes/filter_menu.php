@@ -2,9 +2,9 @@
 if (!defined( 'ABSPATH' ) )exit('No Such File');
 
 $sch_dashboard = apply_filters('wpsp_sidebar_dashboard_title_menu',esc_html__('Dashboard','WPSchoolPress'));
-$sch_teacher = apply_filters('wpsp_sidebar_teacher_title_menu',esc_html__('Teachers','WPSchoolPress'));
-$sch_student = apply_filters('wpsp_sidebar_student_title_menu',esc_html__('Students','WPSchoolPress'));
-$sch_parent = apply_filters('wpsp_sidebar_parent_title_menu',esc_html__('Parents','WPSchoolPress'));
+$sch_teacher = apply_filters('wpsp_sidebar_teacher_title_menu',esc_html__('Doctors','WPSchoolPress'));
+$sch_student = apply_filters('wpsp_sidebar_student_title_menu',esc_html__('Patients','WPSchoolPress'));
+$sch_parent = apply_filters('wpsp_sidebar_parent_title_menu',esc_html__('Nurses','WPSchoolPress'));
 $sch_message = apply_filters('wpsp_sidebar_message_title_menu',esc_html__('Messages','WPSchoolPress'));
 $sch_registration = apply_filters('wpsp_sidebar_registration_title_menu',esc_html__('Registration Request','WPSchoolPress'));
 $sch_classes = apply_filters('wpsp_sidebar_classes_title_menu',esc_html__('Classes','WPSchoolPress'));
@@ -18,7 +18,6 @@ $sch_student_attendance = apply_filters('wpsp_sidebar_student_attendance_title_m
 $sch_teacher_attendance = apply_filters('wpsp_sidebar_teacher_attendance_title_menu',esc_html__('Teachers Attendance','WPSchoolPress'));
 $sch_events = apply_filters('wpsp_sidebar_events_title_menu',esc_html__('Events','WPSchoolPress'));
 $sch_notfiy = apply_filters('wpsp_sidebar_notify_title_menu',esc_html__('Notify','WPSchoolPress'));
-$sch_transport = apply_filters('wpsp_sidebar_transport_title_menu',esc_html__('Transport','WPSchoolPress'));
 $sch_gen_setting = apply_filters('wpsp_sidebar_general_setting_title_menu',esc_html__('General Settings','WPSchoolPress'));
 $sch_setting = apply_filters('wpsp_sidebar_setting_title_menu',esc_html__('Settings','WPSchoolPress'));
 $sch_workinghours = apply_filters('wpsp_sidebar_workinghours_title_menu',esc_html__('Working Hours','WPSchoolPress'));
