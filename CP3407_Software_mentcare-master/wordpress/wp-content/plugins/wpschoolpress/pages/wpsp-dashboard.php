@@ -413,11 +413,10 @@ if($paymenconfirmationid > 0){
 						<table class="wpsp-table <?php echo $nonemenu; ?>" id="status-table" cellspacing="0" width="100%" style="width:100%;margin-bottom: 30px !important;">
 							<thead>
 								<tr>
-									<th>Student Name</th>
-									<th>Roll No</th>
-									<th>Class Name</th>
-									<th>Class Teacher Name</th>
-									<th>Class Fee Status</th>
+									<th>=Patient Name</th>
+									<th>Patient ID</th>
+									<th>Type injury/Sickness</th>
+									<th>Doctors Name</th>
 									<th>Fees For</th>
 
 									<th>Pay Now</th>
