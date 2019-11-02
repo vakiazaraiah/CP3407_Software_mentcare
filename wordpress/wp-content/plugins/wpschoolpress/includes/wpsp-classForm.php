@@ -26,7 +26,7 @@ if( isset( $_GET['id']) ) {
 		}
 	}
 }
-$label			=	isset( $_GET['id'] ) ? apply_filters( 'wpsp_class_main_heading_update', esc_html__( 'Update Class Information', 'WPSchoolPress' )) : apply_filters( 'wpsp_class_main_heading_add', esc_html__( 'Add Class Information', 'WPSchoolPress' ));
+$label			=	isset( $_GET['id'] ) ? apply_filters( 'wpsp_class_main_heading_update', esc_html__( 'Update Class Information', 'WPSchoolPress' )) : apply_filters( 'wpsp_class_main_heading_add', esc_html__( 'Add Injury/Sickness Details', 'WPSchoolPress' ));
 $formname		=	isset( $_GET['id'] ) ? 'ClassEditForm' : 'ClassAddForm';
 $buttonname	=	isset( $_GET['id'] ) ? 'Update' : 'Submit';
 $propayment = wpsp_check_pro_version('pay_WooCommerce');
@@ -46,32 +46,6 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 			</div>
 			<div class="wpsp-card-body">
 				 <?php wp_nonce_field( 'ClassAction', 'caction_nonce', '', true ) ?>
-				<div class="wpsp-row">
-					<?php  do_action('wpsp_before_class_detail_fields');
-					  $is_required_item = apply_filters('wpsp_class_is_required',array());
-						$item =  apply_filters( 'wpsp_class_title_item',esc_html("Type of Sicknes/Injury","WPSchoolPress"));
-					?>
-					<div class="wpsp-col-md-4 wpsp-col-sm-4 wpsp-col-xs-12">
-						<div class="wpsp-form-group ">
-							<label class="wpsp-label" for="Name"><?php
-								$pl = "";
-								if(isset($item['Name'])){
-											echo $pl = esc_html($item['Name'],"WPSchoolPress");
-								}else{
-										echo $pl = esc_html("Type of Sicknes/Injury","WPSchoolPress");
-								}
-								/*Check Required Field*/
-								if(isset($is_required_item['Name'])){
-										$is_required =  $is_required_item['Name'];
-								}else{
-										$is_required = true;
-								}
-								?>
-							<span class="wpsp-required"><?php echo ($is_required)?"*":""; ?></span>
-							</label>
-							<input type="text" data-is_required="<?php echo $is_required; ?>" class="wpsp-form-control"  name="Name" placeholder="<?php echo $pl; ?>" value="<?php echo $classname; ?>">
-						</div>
-					</div>
 					<div class="wpsp-col-md-4 wpsp-col-sm-4 wpsp-col-xs-12">
 					   <div class="wpsp-form-group">
 							<label class="wpsp-label" for="Number"><?php

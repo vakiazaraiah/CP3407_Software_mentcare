@@ -12,7 +12,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 		<div class="wpsp-col-md-12">
 			<div class="wpsp-card">
 				<div class="wpsp-card-head">
-					<h3 class="wpsp-card-title">Drag and Drop Subjects </h3>
+					<h3 class="wpsp-card-title">Drag and Drop  </h3>
 				</div>
 				<div class="wpsp-card-body">
 					<?php
@@ -42,7 +42,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 					$clt = $wpdb->get_results("SELECT * FROM $wpsp_subjects_table WHERE class_id=$class_id or class_id=0 order by class_id desc");
 					if( count($clt) == 0 ) {
 						$error = 1;
-						echo "<div class='wpsp-text-red'>No Subjects retrieved, Check you have subject for this class at <a href='".site_url()."/wp-admin/admin.php?page=sch-subject'>Subjects</a></div>";
+						echo "<div class='wpsp-text-red'>No Information retrieved, Check you have appoinment for this injury/sicjness at <a href='".site_url()."/wp-admin/admin.php?page=sch-subject'>Subjects</a></div>";
 					}
 					if( $error == 0 ) {
 						$timetable	=	array();

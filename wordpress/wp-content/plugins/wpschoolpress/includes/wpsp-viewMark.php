@@ -62,18 +62,18 @@ if(empty( $error ) && (wpsp_IsMarkEntered( $class_id, $subject_id, $exam_id ) ) 
 			$exTable	=	$wpdb->prefix.'wpsp_exam';
 			$examName	=	$wpdb->get_var( "SELECT e_name FROM `$exTable` where eid=$exam_id" );
 			echo '<div class="wp-mark-info" style="display:none;">';
-			echo !empty( $className ) ? '<b>Class Name 		: </b>'.$className : '';
-			echo !empty( $subName ) ? '<br><b>Subject Name	: </b>'.$subName : '';
-			echo !empty( $examName ) ? '<br><b>Exam Name	: </b>'.$examName : '';
+			echo !empty( $className ) ? '<b>Injury/Sickness 		: </b>'.$className : '';
+			echo !empty( $subName ) ? '<br><b>Type of Injury/Sickness	: </b>'.$subName : '';
+			echo !empty( $examName ) ? '<br><b>Injury details	: </b>'.$examName : '';
 			echo '</div>';
 		?>
 		<table class="wpsp-table wpsp-table-bordered table-striped table-responsive" id="wp-student-mark" style="width:100%">
 			<thead>
 				<tr>
 					<th width="10%" class="nosort">#</th>
-					<th>RollNo.</th>
+					<th>Patient ID.</th>
 					<th>Name</th>
-					<th>Mark</th>
+					<th>Progression</th>
 					<?php
 					if(!empty($extra_fields)){
 							foreach($extra_fields as $extf){?>

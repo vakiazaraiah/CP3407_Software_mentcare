@@ -112,22 +112,7 @@ if( !empty( $stinfo ) ) {
                                 <input type="text" class="wpsp-form-control select_date" value="<?php echo !empty( $stinfo->s_dob ) ? wpsp_ViewDate($stinfo->s_dob) : ''; ?>" id="Dob" name="s_dob" placeholder="mm/dd/yyyy">
                             </div>
                         </div>
-                        <div class="wpsp-col-lg-3 wpsp-col-md-4 wpsp-col-sm-4 wpsp-col-xs-12">
-                            <div class="wpsp-form-group">
-                                <label class="wpsp-label" for="bloodgroup">Blood Group</label>
-                                <select class="wpsp-form-control" id="Bloodgroup" name="s_bloodgrp">
-                                    <option value="">Select Blood Group</option>
-                                    <option <?php if ($stinfo->s_bloodgrp == 'O+') echo "selected"; ?> value="O+">O +</option>
-                                    <option <?php if ($stinfo->s_bloodgrp == 'O-') echo "selected"; ?> value="O-">O -</option>
-                                    <option <?php if ($stinfo->s_bloodgrp == 'A+') echo "selected"; ?> value="A+">A +</option>
-                                    <option <?php if ($stinfo->s_bloodgrp == 'A-') echo "selected"; ?> value="A-">A -</option>
-                                    <option <?php if ($stinfo->s_bloodgrp == 'B+') echo "selected"; ?> value="B+">B +</option>
-                                    <option <?php if ($stinfo->s_bloodgrp == 'B-') echo "selected"; ?> value="B-">B -</option>
-                                    <option <?php if ($stinfo->s_bloodgrp == 'AB+') echo "selected"; ?> value="AB+">AB +</option>
-                                    <option <?php if ($stinfo->s_bloodgrp == 'AB-') echo "selected"; ?> value="AB-">AB -</option>
-                                </select>
-                            </div>
-                               </div>
+                    
                             <div class="wpsp-col-lg-3 wpsp-col-md-3 wpsp-col-sm-4 wpsp-col-xs-12">
                                 <div class="wpsp-form-group">
                                         <label class="wpsp-label" for="s_p_phone">Phone Number</label>
@@ -464,22 +449,7 @@ if( !empty( $stinfo ) ) {
                         </div>
                     </div>
                     
-                    <div class="wpsp-col-lg-3 wpsp-col-md-4 wpsp-col-sm-4 wpsp-col-xs-12">
-                        <div class="wpsp-form-group">
-                            <label for="bloodgroup">Blood Group (Optional)</label>
-                            <select class="wpsp-form-control" id="Bloodgroup" name="p_bloodgrp">
-                                <option value="">Select Blood Group</option>
-                                <option <?php if ($stinfo->p_bloodgrp == 'O+') echo "selected"; ?> value="O+">O +</option>
-                                <option <?php if ($stinfo->p_bloodgrp == 'O-') echo "selected"; ?> value="O-">O -</option>
-                                <option <?php if ($stinfo->p_bloodgrp == 'A+') echo "selected"; ?> value="A+">A +</option>
-                                <option <?php if ($stinfo->p_bloodgrp == 'A-') echo "selected"; ?> value="A-">A -</option>
-                                <option <?php if ($stinfo->p_bloodgrp == 'B+') echo "selected"; ?> value="B+">B +</option>
-                                <option <?php if ($stinfo->p_bloodgrp == 'B-') echo "selected"; ?> value="B-">B -</option>
-                                <option <?php if ($stinfo->p_bloodgrp == 'AB+') echo "selected"; ?> value="AB+">AB +</option>
-                                <option <?php if ($stinfo->p_bloodgrp == 'AB-') echo "selected"; ?> value="AB-">AB -</option>
-                            </select>
-                        </div>
-                    </div>
+                
                     <?php  do_action('wpsp_after_parent_personal_detail_editprofile_fields'); ?>
                     <div class="wpsp-col-xs-12">
                         <button type="submit" class="wpsp-btn wpsp-btn-success" id="parentform">Upate</button>
