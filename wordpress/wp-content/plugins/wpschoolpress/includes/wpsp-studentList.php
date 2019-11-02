@@ -13,7 +13,7 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 									's_gender'			=>	__('Gender', 'WPSchoolPress'),
 									's_address'			=>	__('Current Address', 'WPSchoolPress'),
 									's_paddress'		=>	__('Permanent Address', 'WPSchoolPress'),
-									'p_fname '			=>	__('Doctor First Name', 'WPSchoolPress'),
+									'p_fname '			=>	__('Parent First Name', 'WPSchoolPress'),
 									's_bloodgrp'		=>	__('Blood Group', 'WPSchoolPress'),
 									's_dob'				=>	__('Date Of Birth', 'WPSchoolPress'),
 									's_doj'				=>	__('Date Of Join', 'WPSchoolPress'),
@@ -43,7 +43,7 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 		?>
 		<div class="subject-inner wpsp-left wpsp-class-filter">
 			<form name="StudentClass" id="StudentClass" method="post" action="">
-				<label class="wpsp-labelMain"><?php _e( 'Select Appointment Type', 'WPSchoolPress' ); ?></label>
+				<label class="wpsp-labelMain"><?php _e( 'Select Class Name', 'WPSchoolPress' ); ?></label>
 				<select name="ClassID" id="ClassID" class="wpsp-form-control">
 					<?php
 					$sel_classid	=	isset( $_POST['ClassID'] ) ? intval($_POST['ClassID']) : '';
@@ -140,7 +140,7 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 								</th>
 								<th><?php echo apply_filters( 'wpsp_student_table_rollno_heading',esc_html__('Roll No.','WPSchoolPress'));?></th>
 								<th><?php echo apply_filters( 'wpsp_student_table_fullname_heading',esc_html__('Full Name','WPSchoolPress'));?></th>
-								<th><?php echo apply_filters( 'wpsp_student_table_parent_heading',esc_html__('Doctor','WPSchoolPress'));?></th>
+								<th><?php echo apply_filters( 'wpsp_student_table_parent_heading',esc_html__('Parent','WPSchoolPress'));?></th>
 								<th><?php echo apply_filters( 'wpsp_student_table_streetaddress_heading',esc_html__('Street Address','WPSchoolPress'));?></th>
 								<?php  if($propayment =='installed'){?>
 								<th><?php echo apply_filters( 'wpsp_student_table_paymentstatus_heading',esc_html__('Payment Status','WPSchoolPress'));?></th>
@@ -329,7 +329,7 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 								else echo 'Sr. No'; ?></th>
 							<th>Roll No.</th>
 							<th>Full Name</th>
-							<th>Doctor</th>
+							<th>Parent</th>
 							<th>Street Address</th>
 							<?php  if($propayment =='installed'){?>
 								<th>Payment Status</th>

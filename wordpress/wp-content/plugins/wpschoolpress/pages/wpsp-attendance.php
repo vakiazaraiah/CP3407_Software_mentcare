@@ -21,7 +21,7 @@ wpsp_header();
 								$item =  apply_filters( 'wpsp_student_attendance_title_item',esc_html("Attendance","WPSchoolPress"));
 								?>
 							<div class="wpsp-col-lg-5 wpsp-col-md-5 wpsp-col-sm-12 wpsp-col-xs-12" id="AttendanceEnterForm">
-							<h3 class="wpsp-card-title">Appointments</h3>
+							<h3 class="wpsp-card-title">Attendance</h3>
 							<div class="line_box">
 									<div class="wpsp-form-group">
 										<label for="Class">
@@ -53,7 +53,7 @@ wpsp_header();
 														<option value="<?php echo $cnm->cid;?>" <?php if($cnm->cid==$selid) echo "selected";?>><?php echo $cnm->c_name;?></option>
 													<?php } } ?>
 											</select>
-											<span class="clserror wpsp-text-red">Please select appointment</span>
+											<span class="clserror wpsp-text-red">Please select Class</span>
 									</div>
 									<div class="wpsp-form-group">
 										<label for="date">	<?php if( isset($item['entry_date'])){
