@@ -6,7 +6,7 @@
         <div class="wpsp-col-sm-12">
             <div class="wpsp-card">
                  <div class="wpsp-card-head">
-                    <h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_teacher_title_personal_detail', esc_html__( 'Doctors Details', 'WPSchoolPress' )); ?></h3>
+                    <h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_teacher_title_personal_detail', esc_html__( 'Personal Details', 'WPSchoolPress' )); ?></h3>
                 </div>
                 <div class="wpsp-card-body">
                     <?php wp_nonce_field( 'TeacherRegister', 'tregister_nonce', '', true ) ?>
@@ -456,7 +456,120 @@
                 </div>
             </div>
         </div>
-                  
+    </div>
+    <div class="wpsp-col-md-6 wpsp-col-sm-12">
+        <div class="wpsp-card">
+            <div class="wpsp-card-head">
+                <h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_teacher_title_school_detail', esc_html__( 'School Details', 'WPSchoolPress' )); ?></h3>
+            </div>
+            <div class="wpsp-card-body">
+                   <?php  do_action('wpsp_before_teacher_school_detail_fields');
+                   /*Required field Hook*/
+                   $is_required_school = apply_filters('wpsp_teacher_school_is_required',array());
+                   ?>
+                <div class="wpsp-form-group">
+                    <label class="wpsp-label" for="Doj"><?php $item =  apply_filters( 'wpsp_teacher_school_title_item',esc_html("Joining Date","WPSchoolPress"));
+                        $pl = "";
+                        if(isset($item['section']) && $item['section'] == "school" && isset($item['Doj'])){
+                              echo $pl = esc_html($item['Doj'],"WPSchoolPress");
+
+                        }else{
+                            echo $pl = esc_html("Joining Date","WPSchoolPress");
+                        }
+                        /*Check Required Field*/
+                        if(isset($is_required_school['section']) && $is_required_school['section'] == "school" && isset($is_required_school['Doj'])){
+                            $is_required =  $is_required_school['Doj'];
+                        }else{
+                            $is_required = false;
+                        }
+                        ?>
+                        <span class="wpsp-required"><?php echo ($is_required)?"*":""; ?></span></label>
+                    <input type="text" data-is_required="<?php echo $is_required; ?>" class="wpsp-form-control select_date Doj" id="Doj" name="Doj" value="" placeholder="mm/dd/yyyy" readonly>
+                </div>
+                <div class="wpsp-form-group">
+                    <label class="wpsp-label" for="Dol"><?php $item =  apply_filters( 'wpsp_teacher_school_title_item',esc_html("Leaving Date","WPSchoolPress"));
+                        $pl = "";
+                        if(isset($item['section']) && $item['section'] == "school" && isset($item['dol'])){
+                              echo $pl = esc_html($item['dol'],"WPSchoolPress");
+
+                        }else{
+                            echo $pl = esc_html("Leaving Date","WPSchoolPress");
+                        }
+                        /*Check Required Field*/
+                        if(isset($is_required_school['section']) && $is_required_school['section'] == "school" && isset($is_required_school['dol'])){
+                            $is_required =  $is_required_school['dol'];
+                        }else{
+                            $is_required = false;
+                        }
+                        ?>
+                        <span class="wpsp-required"><?php echo ($is_required)?"*":""; ?></span></label>
+                    <input type="text" class="wpsp-form-control select_date Dol" id="Dol" name="dol" value="" placeholder="mm/dd/yyyy" readonly>
+                </div>
+                <div class="wpsp-form-group">
+                    <label class="wpsp-label" for="position"><?php $item =  apply_filters( 'wpsp_teacher_school_title_item',esc_html("Current Position","WPSchoolPress"));
+                        $pl = "";
+                        if(isset($item['section']) && $item['section'] == "school" && isset($item['Position'])){
+                              echo $pl = esc_html($item['Position'],"WPSchoolPress");
+
+                        }else{
+                            echo $pl = esc_html("Current Position","WPSchoolPress");
+                        }
+                        /*Check Required Field*/
+                        if(isset($is_required_school['section']) && $is_required_school['section'] == "school" && isset($is_required_school['Position'])){
+                            $is_required =  $is_required_school['Position'];
+                        }else{
+                            $is_required = false;
+                        }
+                        ?>
+                        <span class="wpsp-required"><?php echo ($is_required)?"*":""; ?></span></label>
+                    <input type="text" data-is_required="<?php echo $is_required; ?>" class="wpsp-form-control" id="Position" name="Position" placeholder="<?php echo $pl; ?>">
+                </div>
+                <div class="wpsp-row">
+                    <div class="wpsp-col-md-6 wpsp-col-xs-12">
+                        <div class="wpsp-form-group">
+                            <label class="wpsp-label" for="empcode"><?php $item =  apply_filters( 'wpsp_teacher_school_title_item',esc_html("Employee Code","WPSchoolPress"));
+                                $pl = "";
+                                if(isset($item['section']) && $item['section'] == "school" && isset($item['EmpCode'])){
+                                      echo $pl = esc_html($item['EmpCode'],"WPSchoolPress");
+
+                                }else{
+                                    echo $pl = esc_html("Employee Code","WPSchoolPress");
+                                }
+                                /*Check Required Field*/
+                                if(isset($is_required_school['section']) && $is_required_school['section'] == "school" && isset($is_required_school['EmpCode'])){
+                                    $is_required =  $is_required_school['EmpCode'];
+                                }else{
+                                    $is_required = false;
+                                }
+                                ?>
+                                <span class="wpsp-required"><?php echo ($is_required)?"*":""; ?></span></label>
+                            <input type="text" class="wpsp-form-control" id="EmpCode" name="EmpCode" placeholder="<?php echo $pl; ?>">
+                        </div>
+                    </div>
+                    <div class="wpsp-col-md-6 wpsp-col-xs-12">
+                        <div class="wpsp-form-group">
+                            <label class="wpsp-label" for="whours"><?php $item =  apply_filters( 'wpsp_teacher_school_title_item',esc_html("Working Hours","WPSchoolPress"));
+                                $pl = "";
+                                if(isset($item['section']) && $item['section'] == "school" && isset($item['whours'])){
+                                      echo $pl = esc_html($item['whours'],"WPSchoolPress");
+
+                                }else{
+                                    echo $pl = esc_html("Working Hours","WPSchoolPress");
+                                }
+                                /*Check Required Field*/
+                                if(isset($is_required_school['section']) && $is_required_school['section'] == "school" && isset($is_required_school['whours'])){
+                                    $is_required =  $is_required_school['whours'];
+                                }else{
+                                    $is_required = true;
+                                }
+                                ?>
+                                <span class="wpsp-required"><?php echo ($is_required)?"*":""; ?></span></label>
+                            <input type="text" class="wpsp-form-control" id="whours" name="whours" placeholder="<?php echo $pl; ?>">
+                        </div>
+                    </div>
+
+                </div>
+                   <?php  do_action('wpsp_after_teacher_school_detail_fields'); ?>
                 <div class="wpsp-btnsubmit-section">
                     <button type="submit" class="wpsp-btn wpsp-btn-success" id="teacherform">Submit</button>&nbsp;&nbsp;
                     <a href="<?php echo wpsp_admin_url();?>sch-teacher" class="wpsp-btn wpsp-dark-btn">Back</a>

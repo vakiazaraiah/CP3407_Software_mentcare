@@ -135,9 +135,9 @@ function wpsp_sidebar(){
   
     if($current_user_role=='administrator' || $current_user_role=='teacher'){
     switch( $page ){
-      // case 'dashboard':
-      // $dashboard_page="active";
-      // break;
+      case 'dashboard':
+      $dashboard_page="active";
+      break;
       case 'messages':
       $message_page="active";
       break;
@@ -152,21 +152,6 @@ function wpsp_sidebar(){
       break;
       case 'parent':
       $parent_page="active";
-      break;
-      case 'class':
-      $class_page="active";
-      break;
-      case 'attendance':
-      $attendance_page="active";
-      break;
-      case 'subject':
-      $subject_page="active";
-      break;
-      case 'exams':
-      $exam_page="active";
-      break;
-      case 'marks':
-      $mark_page="active";
       break;
       case 'importhistory':
       $import_page="active";
@@ -183,9 +168,6 @@ function wpsp_sidebar(){
       break;
       case 'events':
       $event_page="active";
-      break;
-      case 'transport':
-      $transport_page="active";
       break;
       case 'leavecalendar':
       $leave_page="active";
@@ -298,20 +280,7 @@ function wpsp_sidebar(){
           <span>".$sch_parent."</span>
           </a>
           </li>
-          <li class='has-submenu ".((isset($class_page_our)? $class_page_our : ''))."'>
-          <a href='".site_url('wp-admin/admin.php?page=sch-class')."'>
-          <i class='dashicons dashicons-welcome-widgets-menus icon'></i>
-          <span>".$sch_classes."</span>
-          </a>
-          <ul class='sub-menu'>
-          <li class='".$class_page."'>
-            <a href='".site_url('wp-admin/admin.php?page=sch-class')."'>
-              <span>".$sch_classes."</span>
-            </a>
-          </li>
-          <li class='".$subject_page."'>
-            <a href='".site_url('wp-admin/admin.php?page=sch-subject')."'>
-              <span>".$sch_subject."</span>
+          
             </a>
           </li>";
 
@@ -370,11 +339,6 @@ function wpsp_sidebar(){
             </a>
           </li>";
         }
-         echo "<li class='".$transport_page."'>
-            <a href='".site_url('wp-admin/admin.php?page=sch-transport')."'>
-              <i class='icon wpsp-school-bus'></i><span>".$sch_transport."</span>
-            </a>
-           </li>";
       echo "<li class='has-submenu ".((isset($settings_page_main)? $settings_page_main : '' ))."'>
           <a href='#'>
           <i class='dashicons dashicons-admin-generic'></i>
@@ -446,9 +410,6 @@ function wpsp_sidebar(){
         break;
         case 'events':
         $event_page="active";
-        break;
-        case 'transport':
-        $transport_page="active";
         break;
         case 'leavecalendar':
         $leave_page="active";
@@ -618,30 +579,6 @@ foreach($courses as $key => $value) {
                     <span>".$sch_student."</span>
                   </a>
                 </li>
-                <li class='".$subject_page."'>
-                  <a href='".site_url('wp-admin/admin.php?page=sch-subject&cid=').$id."'>
-                    <span>".$sch_subject."</span>
-                  </a>
-                </li>
-                <li class='".$exam_page."'>
-                  <a href='".site_url('wp-admin/admin.php?page=sch-exams&cid=').$id."'>
-                    <span>".$sch_exams."</span>
-                  </a>
-                </li>
-                <li class='".$mark_page."'>
-                  <a href='".site_url('wp-admin/admin.php?page=sch-marks&cid=').$id."'>
-                    <span>".$sch_marks."</span>
-                  </a>
-                </li>
-                <li class='".$attendance_page."'>
-                  <a href='".site_url('wp-admin/admin.php?page=sch-attendance&cid=').$id."'>
-                    <span>".$sch_attendance."</span>
-                  </a>
-                </li>
-                <li class='".$leave_page."'>
-                  <a href='".site_url('wp-admin/admin.php?page=sch-leavecalendar&cid=').$id."'>
-                 <span>".$sch_leavecalendar."</span></a>
-                </li>
               </ul>
           </li></li></ul>";
           }
@@ -694,36 +631,6 @@ foreach($courses as $key => $value) {
         break;
         case 'parent':
         $parent_page="active";
-        break;
-        // case 'class':
-        // $class_page="active";
-        // break;
-        case 'attendance':
-        $attendance_page="active";
-        break;
-        case 'subject':
-        $subject_page="active";
-        break;
-        case 'exams':
-        $exam_page="active";
-        break;
-        case 'marks':
-        $mark_page="active";
-        break;
-        case 'events':
-        $event_page="active";
-        break;
-        case 'transport':
-        $transport_page="active";
-        break;
-        case 'leavecalendar':
-        $leave_page="active";
-        break;
-        case 'timetable' :
-        $timetable_page='active';
-        break;
-        case 'history' :
-        $history_page='active';
         break;
       }
       $query = $_SERVER['QUERY_STRING'];
@@ -778,7 +685,7 @@ foreach($courses as $key => $value) {
       global $current_user, $wpdb;
       $ctable= $wpdb->prefix."wpsp_class";
       $stable= $wpdb->prefix."wpsp_student";
-      $wpsp_classes =$wpdb->get_results("SELECT class_id,sid,s_fname,s_mname,s_lname FROM $stable where parent_wp_usr_id = $current_user->ID");
+      
       echo "<!-- Left side column. contains the logo and sidebar -->
           <div class='wpsp-overlay'></div>
           <aside class='wpsp-sidebar ifnotadmin ".((isset($nonemenu)? $nonemenu : ''))."'>
@@ -799,12 +706,6 @@ foreach($courses as $key => $value) {
                 </a>
                 </li>";
               }
-              echo "<li class='".$student_page." has-submenu ".$class_innercls1."'>
-                  <a href='".site_url('wp-admin/admin.php?page=sch-student')."'>
-                    <i class='dashicons dashicons-id icon'></i>
-                    <span>".$sch_student."</span>
-                  </a>";
-
               foreach ($wpsp_classes as $sclas) {
                 echo "<ul class='sub-menu ".$class_innercls1."'>
                  <li class='".$student_page." has-submenu ".$class_innercls1."'>
@@ -941,6 +842,7 @@ foreach($courses as $key => $value) {
           </aside>";
   }
 }
+
 /* This function used for Header Breadcrumb */
 function wpsp_body_start()
 {

@@ -445,8 +445,18 @@ if( !empty( $stinfo ) ) {
                         </div>
                     </div>
                   
-            
-                
+                    <div class="wpsp-col-lg-3 wpsp-col-md-4 wpsp-col-sm-4 wpsp-col-xs-12">
+                        <div class="wpsp-form-group">
+                            <label class="wpsp-label" for="p_edu">Education</label>
+                            <input type="text" class="wpsp-form-control" value="<?php echo $stinfo->p_edu; ?>" name="p_edu" placeholder="Parent Education">
+                        </div>
+                    </div>
+                    <div class="wpsp-col-lg-3 wpsp-col-md-4 wpsp-col-sm-4 wpsp-col-xs-12">
+                        <div class="wpsp-form-group">
+                            <label class="wpsp-label" for="p_profession">Profession</label>
+                            <input type="text" class="wpsp-form-control" name="p_profession" value="<?php echo $stinfo->p_profession; ?>" placeholder="Parent Profession">
+                        </div>
+                    </div>
                     <div class="wpsp-col-lg-3 wpsp-col-md-4 wpsp-col-sm-4 wpsp-col-xs-12">
                         <div class="wpsp-form-group">
                             <label for="phone">Phone</label>

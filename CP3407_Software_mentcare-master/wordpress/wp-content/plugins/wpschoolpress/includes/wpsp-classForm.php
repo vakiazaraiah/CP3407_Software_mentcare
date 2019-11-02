@@ -48,7 +48,7 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 				<div class="wpsp-row">
 					<?php  do_action('wpsp_before_class_detail_fields');
 					  $is_required_item = apply_filters('wpsp_class_is_required',array());
-						$item =  apply_filters( 'wpsp_class_title_item',esc_html("Injury/Sickness","WPSchoolPress"));
+						$item =  apply_filters( 'wpsp_class_title_item',esc_html("Class Name","WPSchoolPress"));
 					?>
 					<div class="wpsp-col-md-4 wpsp-col-sm-4 wpsp-col-xs-12">
 						<div class="wpsp-form-group ">
@@ -57,7 +57,7 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 								if(isset($item['Name'])){
 											echo $pl = esc_html($item['Name'],"WPSchoolPress");
 								}else{
-										echo $pl = esc_html("Injury/Sickness","WPSchoolPress");
+										echo $pl = esc_html("Class Name","WPSchoolPress");
 								}
 								/*Check Required Field*/
 								if(isset($is_required_item['Name'])){
