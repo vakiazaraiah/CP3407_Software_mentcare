@@ -618,6 +618,11 @@ foreach($courses as $key => $value) {
                     <span>".$sch_student."</span>
                   </a>
                 </li>
+                <li class='".$parent_page."'>
+                  <a href='".site_url('wp-admin/admin.php?page=sch-parent&cid=').$id."'>
+                    <span>".$sch_parent."</span>
+                  </a>
+                </li>
                 <li class='".$subject_page."'>
                   <a href='".site_url('wp-admin/admin.php?page=sch-subject&cid=').$id."'>
                     <span>".$sch_subject."</span>
@@ -1140,8 +1145,8 @@ if(isset($_GET['cid'])){
                 }
               endif;
               if(($current_user_role=='administrator')):
-                if($result == 'teacherattendance' || $result == 'attendance' || $result == 'marks' || $_GET['tab'] == 'addteacher' || $_GET['tab'] == 'addstudent'  || $_GET['tab'] == 'addclass' || $_GET['tab'] == 'addsubject' || $result == 'leavecalendar' || $_GET['tab'] == 'addexam' || $_GET['ac'] == 'add' ||  $result == 'settings' || $result == 'messages'){} else{
-                    echo "<a class='wpsp-btn $current_user_role' href='$addurl'><i class='fa fa-plus-circle'></i> Create New</a>";
+                if($result == 'teacherattendance' || $result == 'attendance' || $result == 'marks' || $_GET['tab'] == 'addteacher' || $_GET['tab'] == 'addstudent'  || $_GET['tab'] == 'addparent' || $_GET['tab'] == 'addclass' || $_GET['tab'] == 'addsubject' || $result == 'leavecalendar' || $_GET['tab'] == 'addexam' || $_GET['ac'] == 'add' ||  $result == 'settings' || $result == 'messages'){} else{
+                    echo "<a class='wpsp-btn $current_user_role' href='$addurl'><i class='fa fa-plus-circle'></i> Yur New</a>";
                 }
               endif;
             endif;

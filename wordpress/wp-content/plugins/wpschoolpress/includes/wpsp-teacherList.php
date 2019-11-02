@@ -38,7 +38,7 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 
 
 
-									'user_email'		=>	__('Teacher Email', 'WPSchoolPress'),
+									'user_email'		=>	__('Doctor Email', 'WPSchoolPress'),
 
 
 
@@ -66,15 +66,7 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 
 
 
-									'dol'				=>	__('Date Of Releaving', 'WPSchoolPress'),
-
-
-
 									'phone'				=>	__('Phone Number', 'WPSchoolPress'),
-
-
-
-									'qualification'	    =>	__('Qualification', 'WPSchoolPress'),
 
 
 
@@ -82,15 +74,7 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 
 
 
-									'bloodgrp'			=>	__('Blood Group', 'WPSchoolPress'),
-
-
-
 									'position'			=>	__('Position', 'WPSchoolPress'),
-
-
-
-									'whours'			=>	__('Working Hours', 'WPSchoolPress'),
 
 
 
@@ -728,7 +712,7 @@ $plugins_url=plugins_url();
 
 
 
-						<th> <?php _e( 'Employee Code', 'WPSchoolPress' );?></th>						
+						<th> <?php _e( 'Employee ID', 'WPSchoolPress' );?></th>						
 
 
 
@@ -900,7 +884,7 @@ $plugins_url=plugins_url();
 
 
 
-						<th> <?php _e( 'Employee Code', 'WPSchoolPress' );?></th>							
+						<th> <?php _e( 'Employee ID', 'WPSchoolPress' );?></th>							
 
 
 

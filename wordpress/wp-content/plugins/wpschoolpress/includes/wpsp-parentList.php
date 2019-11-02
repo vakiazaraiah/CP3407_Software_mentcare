@@ -7,12 +7,12 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 	  $parentFieldList =  array(	'p_fname'		=>	__('First Name', 'WPSchoolPress'),	
 									'p_mname'		=>	__('Middle Name', 'WPSchoolPress'),	
 									'p_lname'		=>	__('Last Name', 'WPSchoolPress'),
-									's_fname'		=>	__('Student Name', 'WPSchoolPress'),
-									'user_email'	=>	__('Parent Email ID', 'WPSchoolPress'),
+									's_fname'		=>	__('Patient Name', 'WPSchoolPress'),
+									'user_email'	=>	__('Nurse Email ID', 'WPSchoolPress'),
 									'p_edu'			=>	__('Education', 'WPSchoolPress'),									
 									'p_gender'		=>	__('Gender', 'WPSchoolPress'),
-									'p_profession'	=>	__('Profession', 'WPSchoolPress'),
-									'p_bloodgrp'	=>	__('Blood Group', 'WPSchoolPress'),
+									
+									
 							);
 		$sel_classid	=	isset( $_POST['ClassID'] ) ? sanitize_text_field($_POST['ClassID']) : '';										
 		$class_table	=	$wpdb->prefix."wpsp_class";
@@ -170,9 +170,9 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 			<table id="parent_table" class="wpsp-table" cellspacing="0" width="100%" style="width:100%">
 			<thead>
 				<tr>								
-					<th><?php echo apply_filters( 'wpsp_parent_name_list_detail', esc_html__( 'Parent Name', 'WPSchoolPress' )); ?></th>
-					<th>Student Name</th>							
-					<th><?php echo apply_filters( 'wpsp_parent_email_list_detail', esc_html__( 'Parent Email ID', 'WPSchoolPress' )); ?></th>
+					<th><?php echo apply_filters( 'wpsp_parent_name_list_detail', esc_html__( 'Nurse Name', 'WPSchoolPress' )); ?></th>
+					<th>Patient Name</th>							
+					<th><?php echo apply_filters( 'wpsp_parent_email_list_detail', esc_html__( 'Nurse Email ID', 'WPSchoolPress' )); ?></th>
 					<th  align="center" class="nosort">Action</th>
 				</tr>
 			</thead>
@@ -215,9 +215,9 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 			</tbody>
 			<tfoot>
 			  <tr>														
-					<th><?php echo apply_filters( 'wpsp_parent_name_list_detail', esc_html__( 'Parent Name', 'WPSchoolPress' )); ?></th>
-				<th>Student Name</th>							
-				<th><?php echo apply_filters( 'wpsp_parent_email_list_detail', esc_html__( 'Parent Email ID', 'WPSchoolPress' )); ?></th>
+					<th><?php echo apply_filters( 'wpsp_parent_name_list_detail', esc_html__( 'Nurse Name', 'WPSchoolPress' )); ?></th>
+				<th>Patient Name</th>							
+				<th><?php echo apply_filters( 'wpsp_parent_email_list_detail', esc_html__( 'Nurse Email ID', 'WPSchoolPress' )); ?></th>
 				<th  align="center">Action</th>
 			  </tr>
 			</tfoot>
