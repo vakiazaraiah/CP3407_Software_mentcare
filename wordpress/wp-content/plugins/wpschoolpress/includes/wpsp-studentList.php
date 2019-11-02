@@ -138,9 +138,9 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 								<th class="nosort">
 								<?php if ( in_array( 'administrator', $role ) ) { ?><input type="checkbox" id="selectall" name="selectall" class="ccheckbox"><?php } else echo 'Sr. No.'; ?>
 								</th>
-								<th><?php echo apply_filters( 'wpsp_student_table_rollno_heading',esc_html__('Roll No.','WPSchoolPress'));?></th>
+								<th><?php echo apply_filters( 'wpsp_student_table_rollno_heading',esc_html__('Patient id','WPSchoolPress'));?></th>
 								<th><?php echo apply_filters( 'wpsp_student_table_fullname_heading',esc_html__('Full Name','WPSchoolPress'));?></th>
-								<th><?php echo apply_filters( 'wpsp_student_table_parent_heading',esc_html__('Parent','WPSchoolPress'));?></th>
+								<th><?php echo apply_filters( 'wpsp_student_table_parent_heading',esc_html__('Doctor','WPSchoolPress'));?></th>
 								<th><?php echo apply_filters( 'wpsp_student_table_streetaddress_heading',esc_html__('Street Address','WPSchoolPress'));?></th>
 								<?php  if($propayment =='installed'){?>
 								<th><?php echo apply_filters( 'wpsp_student_table_paymentstatus_heading',esc_html__('Payment Status','WPSchoolPress'));?></th>
@@ -327,9 +327,9 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
 						  <tr>
 							<th><?php if ( in_array( 'administrator', $role ) ) { }
 								else echo 'Sr. No'; ?></th>
-							<th>Roll No.</th>
+							<th>Patient ID.</th>
 							<th>Full Name</th>
-							<th>Parent</th>
+							<th>Doctor</th>
 							<th>Street Address</th>
 							<?php  if($propayment =='installed'){?>
 								<th>Payment Status</th>

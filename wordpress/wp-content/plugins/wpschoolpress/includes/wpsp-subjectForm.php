@@ -1,3 +1,5 @@
+
+
 <?php
 if (!defined( 'ABSPATH' ) )exit('No Such File');
 $subjectclassid =	intval($_GET['classid']);

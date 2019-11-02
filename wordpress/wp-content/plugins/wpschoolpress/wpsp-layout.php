@@ -89,7 +89,7 @@ function wpsp_topbar(){
       </a>
       <div class="wpsp-head">
       <div class="wpsp-menuIcon"><span></span></div>
-      <h3 class="wpsp-customeMsg">“Live as if you were to die tomorrow. Learn as if you were to live forever.”</h3>
+      <h3 class="wpsp-customeMsg">“Here to help”</h3>
 
       <div class="wpsp-righthead">
         <div class="wpsp-head-action"></div>

@@ -18,7 +18,7 @@ if( is_user_logged_in() ) {
 		$student_table		=	$wpdb->prefix."wpsp_student";
 		$teacher_table		=	$wpdb->prefix."wpsp_teacher";
 		$class_table		=	$wpdb->prefix."wpsp_class";
-		$attendance_table	=	$wpdb->prefix."wpsp_attendance";
+		$attendance_table	=	$wpdb->prefix."";
 		$usercount = $wpdb->get_row("SELECT count(sid) as countstudent FROM $student_table JOIN $user_table ON $user_table.ID = $student_table.wp_usr_id");
 		$teachercount = $wpdb->get_row("SELECT count(tid) as countteacher FROM $teacher_table JOIN $user_table ON $user_table.ID = $teacher_table.wp_usr_id");
 		$parentscount = $wpdb->get_row("SELECT count(sid) as countparents FROM $student_table JOIN $user_table ON $user_table.ID = $student_table.parent_wp_usr_id");

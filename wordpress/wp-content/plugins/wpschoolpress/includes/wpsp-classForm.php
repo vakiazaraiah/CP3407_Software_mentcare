@@ -49,7 +49,7 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 				<div class="wpsp-row">
 					<?php  do_action('wpsp_before_class_detail_fields');
 					  $is_required_item = apply_filters('wpsp_class_is_required',array());
-						$item =  apply_filters( 'wpsp_class_title_item',esc_html("Class Name","WPSchoolPress"));
+						$item =  apply_filters( 'wpsp_class_title_item',esc_html("Type of Sicknes/Injury","WPSchoolPress"));
 					?>
 					<div class="wpsp-col-md-4 wpsp-col-sm-4 wpsp-col-xs-12">
 						<div class="wpsp-form-group ">
@@ -58,7 +58,7 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 								if(isset($item['Name'])){
 											echo $pl = esc_html($item['Name'],"WPSchoolPress");
 								}else{
-										echo $pl = esc_html("Class Name","WPSchoolPress");
+										echo $pl = esc_html("Type of Sicknes/Injury","WPSchoolPress");
 								}
 								/*Check Required Field*/
 								if(isset($is_required_item['Name'])){
@@ -79,7 +79,7 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 								if(isset($item['Number'])){
 											echo $pl = esc_html($item['Number'],"WPSchoolPress");
 								}else{
-										echo $pl = esc_html("Class Number","WPSchoolPress");
+										echo $pl = esc_html("ID Sicknes/Injury","WPSchoolPress");
 								}
 								/*Check Required Field*/
 								if(isset($is_required_item['Number'])){
@@ -100,7 +100,7 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 								if(isset($item['capacity'])){
 											echo $pl = esc_html($item['capacity'],"WPSchoolPress");
 								}else{
-										echo $pl = esc_html("Class Capacity","WPSchoolPress");
+										echo $pl = esc_html("Capacity","WPSchoolPress");
 								}
 								/*Check Required Field*/
 								if(isset($is_required_item['capacity'])){
@@ -116,21 +116,21 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 						<div class="wpsp-form-group">
 						   <label class="wpsp-label" for="Selectteacher"><?php
  								$pl = "";
- 								if(isset($item['ClassTeacherID'])){
- 											echo $pl = esc_html($item['ClassTeacherID'],"WPSchoolPress");
+ 								if(isset($item['Doctor'])){
+ 											echo $pl = esc_html($item['Doctor'],"WPSchoolPress");
  								}else{
- 										echo $pl = esc_html("Class Teacher","WPSchoolPress")."<span> (Incharge)</span>";
+ 										echo $pl = esc_html("Doctor","WPSchoolPress")."<span> (Incharge)</span>";
  								}
  								/*Check Required Field*/
- 								if(isset($is_required_item['ClassTeacherID'])){
- 										$is_required =  $is_required_item['ClassTeacherID'];
+ 								if(isset($is_required_item['Doctor'])){
+ 										$is_required =  $is_required_item['DoctorID'];
  								}else{
  										$is_required = false;
  								}
  								?>
 								<span class="wpsp-required"><?php echo ($is_required)?"*":""; ?></span></label>
-							<select data-is_required="<?php echo $is_required; ?>" name="ClassTeacherID" class="wpsp-form-control">
-								<option value="">Select Teacher </option>
+							<select data-is_required="<?php echo $is_required; ?>" name="DoctorID" class="wpsp-form-control">
+								<option value="">Select Doctor </option>
 								<?php
 								if(!empty($teacher_data)){
 								foreach ($teacher_data as $teacher_list) {
@@ -149,7 +149,7 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 							 if(isset($item['Sdate'])){
 										 echo $pl = esc_html($item['Sdate'],"WPSchoolPress");
 							 }else{
-									 echo $pl = esc_html("Class Starting on","WPSchoolPress");
+									 echo $pl = esc_html("admitted","WPSchoolPress");
 							 }
 							 /*Check Required Field*/
 							 if(isset($is_required_item['Sdate'])){
@@ -169,7 +169,7 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 							 if(isset($item['Edate'])){
 										 echo $pl = esc_html($item['Edate'],"WPSchoolPress");
 							 }else{
-									 echo $pl = esc_html("Class Ending on","WPSchoolPress");
+									 echo $pl = esc_html("Discharged","WPSchoolPress");
 							 }
 							 /*Check Required Field*/
 							 if(isset($is_required_item['Edate'])){
@@ -187,13 +187,13 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 								<label class="wpsp-label" for="Location"><?php
 								 $pl = "";
 								 if(isset($item['Location'])){
-											 echo $pl = esc_html($item['Location'],"WPSchoolPress");
+											 echo $pl = esc_html($item['Location'],"MentCare");
 								 }else{
-										 echo $pl = esc_html("Class Location","WPSchoolPress");
+										 echo $pl = esc_html("Class Location","MentCare");
 								 }
 								 /*Check Required Field*/
 								 if(isset($is_required_item['Location'])){
-										 $is_required =  $is_required_item['Location'];
+										 $is_required =  $is_required_item['MentCare'];
 								 }else{
 										 $is_required = false;
 								 }
@@ -207,9 +207,9 @@ $propayment = !$propayment['status'] ? 'notinstalled'    : 'installed';
 							<label class="wpsp-label" for="Location"><?php
 							 $pl = "";
 							 if(isset($item['classfeetype'])){
-										 echo $pl = esc_html($item['classfeetype'],"WPSchoolPress");
+										 echo $pl = esc_html($item['Injuryfee'],"WPSchoolPress");
 							 }else{
-									 echo $pl = esc_html("Class Fee Type","WPSchoolPress");
+									 echo $pl = esc_html("Injury Fee Type","WPSchoolPress");
 							 }
 							 /*Check Required Field*/
 							 if(isset($is_required_item['classfeetype'])){
