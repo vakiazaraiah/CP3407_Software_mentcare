@@ -18,7 +18,6 @@ $sch_student_attendance = apply_filters('wpsp_sidebar_student_attendance_title_m
 $sch_teacher_attendance = apply_filters('wpsp_sidebar_teacher_attendance_title_menu',esc_html__('Consultation','WPSchoolPress'));
 $sch_events = apply_filters('wpsp_sidebar_events_title_menu',esc_html__('Bookings','WPSchoolPress'));
 $sch_notfiy = apply_filters('wpsp_sidebar_notify_title_menu',esc_html__('Notify','WPSchoolPress'));
-$sch_transport = apply_filters('wpsp_sidebar_transport_title_menu',esc_html__('Transport','WPSchoolPress'));
 $sch_gen_setting = apply_filters('wpsp_sidebar_general_setting_title_menu',esc_html__('General Settings','WPSchoolPress'));
 $sch_setting = apply_filters('wpsp_sidebar_setting_title_menu',esc_html__('Settings','WPSchoolPress'));
 $sch_workinghours = apply_filters('wpsp_sidebar_workinghours_title_menu',esc_html__('Working Hours','WPSchoolPress'));

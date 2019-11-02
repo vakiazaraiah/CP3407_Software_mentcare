@@ -131,10 +131,6 @@ function ajax_actions()
 	add_action('wp_ajax_addLeaveDay', 'wpsp_AddLeaveDay');
 	add_action('wp_ajax_getLeaveDays', 'wpsp_GetLeaveDays');
 	add_action('wp_ajax_getClassYear', 'wpsp_GetClassYear');
-	add_action('wp_ajax_addTransport', 'wpsp_AddTransport');
-	add_action('wp_ajax_updateTransport', 'wpsp_UpdateTransport');
-	add_action('wp_ajax_viewTransport', 'wpsp_ViewTransport');
-	add_action('wp_ajax_deleteTransport', 'wpsp_DeleteTransport');
 	add_action('wp_ajax_sendMessage', 'wpsp_SendMessage');
 	add_action('wp_ajax_sendSubMessage', 'wpsp_sendSubMessage');
 	add_action('wp_ajax_viewMessage', 'wpsp_ViewMessage');

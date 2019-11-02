@@ -121,7 +121,7 @@ function wpsp_sidebar(){
   global $current_user, $wp_roles, $current_user_name;
   $current_user_role=$current_user->roles[0];
   $page = $_GET['page'] ?  ltrim(strstr($_GET['page'],'-'),'-') : '';
-  $dashboard_page=$message_page=$student_page=$teacher_page=$parent_page=$class_page=$attendance_page=$subject_page=$mark_page=$exam_page=$event_page=$timetable_page=$import_page=$notify_page=$sms_page=$transport_page=$settings_page=$settings_general_page=$settings_wrkhours_page=$settings_subfield_page=$leave_page=$teacher_attendance_page=$settings_chgpw_page      = $viewpayment= $addpayment= $history_page =$payment_page_main='';
+  $dashboard_page=$message_page=$student_page=$teacher_page=$parent_page=$class_page=$attendance_page=$subject_page=$mark_page=$exam_page=$event_page=$timetable_page=$import_page=$notify_page=$sms_page=$settings_page=$settings_general_page=$settings_wrkhours_page=$settings_subfield_page=$leave_page=$teacher_attendance_page=$settings_chgpw_page      = $viewpayment= $addpayment= $history_page =$payment_page_main='';
   $proversion1       =    wpsp_check_pro_version('wpsp_addon_version');
   $prodisable1       =    !$proversion1['status'] ? 'notinstalled'    : 'installed';
   $prohistory        =    wpsp_check_pro_version('wpsp_mc_version');
@@ -183,9 +183,6 @@ function wpsp_sidebar(){
       break;
       case 'events':
       $event_page="active";
-      break;
-      case 'transport':
-      $transport_page="active";
       break;
       case 'leavecalendar':
       $leave_page="active";
@@ -370,11 +367,6 @@ function wpsp_sidebar(){
             </a>
           </li>";
         }
-         echo "<li class='".$transport_page."'>
-            <a href='".site_url('wp-admin/admin.php?page=sch-transport')."'>
-              <i class='icon wpsp-school-bus'></i><span>".$sch_transport."</span>
-            </a>
-           </li>";
       echo "<li class='has-submenu ".((isset($settings_page_main)? $settings_page_main : '' ))."'>
           <a href='#'>
           <i class='dashicons dashicons-admin-generic'></i>
@@ -446,9 +438,6 @@ function wpsp_sidebar(){
         break;
         case 'events':
         $event_page="active";
-        break;
-        case 'transport':
-        $transport_page="active";
         break;
         case 'leavecalendar':
         $leave_page="active";
@@ -658,10 +647,6 @@ foreach($courses as $key => $value) {
                   </a>
                 </li>
 
-            <li class='".$transport_page."'>
-            <a href='".site_url('wp-admin/admin.php?page=sch-transport')."'>
-              <i class='icon wpsp-school-bus'></i><span>".$sch_transport."</span>
-            </a>
            </li>";
         if($prohistory['status']){
            echo "<li class='".$history_page."'>
@@ -717,9 +702,6 @@ foreach($courses as $key => $value) {
         break;
         case 'events':
         $event_page="active";
-        break;
-        case 'transport':
-        $transport_page="active";
         break;
         case 'leavecalendar':
         $leave_page="active";
@@ -919,10 +901,7 @@ foreach($courses as $key => $value) {
                   </a>
                 </li>
 
-            <li class='".$transport_page."'>
-            <a href='".site_url('wp-admin/admin.php?page=sch-transport')."'>
-              <i class='icon wpsp-school-bus'></i><span>".$sch_transport."</span>
-            </a>
+            
            </li>";
          if($prohistory['status']){
            echo"<li class='".$history_page."'>
@@ -1038,17 +1017,9 @@ function wpsp_body_start()
       $pagetitle = 'Events';
       $pagetitle = $sch_events;
       break;
-    case 'transport':
-      $pagetitle = 'Transport';
-      $pagetitle = $sch_transport;
-      $breadcum = $base_url.'sch-transport';
-      //$addurl = $base_url.'sch-transport';
-      //$addurl ='';
-      break;
     case 'leavecalendar':
       $pagetitle = 'Leave Calendar';
       $pagetitle = $sch_leavecalendar;
-      $addurl = $base_url.'sch-transport';
       break;
     case 'timetable' :
       $pagetitle = 'Timetable';
@@ -1059,7 +1030,6 @@ function wpsp_body_start()
     case 'subField':
       $pagetitle = 'SubField';
       $pagetitle = $sch_subject_mark_field;
-      $addurl = $base_url.'sch-transport';
       break;
     case 'WrkHours':
       $pagetitle = 'WorkHours';
@@ -1150,7 +1120,7 @@ if(isset($_GET['cid'])){
                 }
               endif;
             endif;
-            if(empty($addurl) && ($current_user_role == 'administrator') && ($result == 'notify' ||  $result == 'settings' || $result =='transport' )):
+            if(empty($addurl) && ($current_user_role == 'administrator') && ($result == 'notify' ||  $result == 'settings')):
               if($result == 'settings'){
                 if((isset($_GET['sc'])) && ($_GET['sc'] == 'WrkHours')){} elseif((isset($_GET['sc'])) && ($_GET['sc'] == 'subField')) {
                 echo "<a class='wpsp-popclick wpsp-btn' data-pop='addFieldModal' id='AddFieldsButton'><i class='fa fa-plus-circle'></i> Create New</a>";
