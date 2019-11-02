@@ -545,26 +545,26 @@ if( $current_user_role=='administrator' || $current_user_role == 'parent'){?> <d
 	<?php  } ?>
 	<div class="wpsp-col-sm-3 wpsp-col-xs-6">
 		<a class="wpsp-colorBox" <?php if($current_user_role == 'parent' || $current_user_role == 'student'){ }else {?> href="<?php echo wpsp_admin_url();?>sch-student" <?php } ?> >
-			<span class="wpsp-colorBox-title"><?php echo apply_filters('wpsp_sidebar_student_title_menu',esc_html__('Students','WPSchoolPress')); ?></span>
+			<span class="wpsp-colorBox-title"><?php echo apply_filters('wpsp_sidebar_student_title_menu',esc_html__('Patients','WPSchoolPress')); ?></span>
 			<h4 class="wpsp-colorBox-head"><?php echo isset( $usercount->countstudent ) ?  intval($usercount->countstudent) : 0; ?><sup>+</sup></h4>
 		</a>
 	</div>
 	<div class="wpsp-col-sm-3 wpsp-col-xs-6">
 		<a class="wpsp-colorBox wpsp-orangebox wpsp-teacherInfo" <?php if($current_user_role == 'parent'  || $current_user_role == 'student'){ }else {?> href="<?php echo wpsp_admin_url();?>sch-teacher" <?php } ?>>
-			<span class="wpsp-colorBox-title"><?php echo apply_filters('wpsp_sidebar_teacher_title_menu',esc_html__('Teachers','WPSchoolPress')); ?></span>
+			<span class="wpsp-colorBox-title"><?php echo apply_filters('wpsp_sidebar_teacher_title_menu',esc_html__('Doctors','WPSchoolPress')); ?></span>
 			<h4 class="wpsp-colorBox-head"><?php echo isset($teachercount->countteacher)  ?  intval($teachercount->countteacher) : 0; ?><sup>+</sup></h4>
 		</a>
 	</div>
 	<div class="wpsp-col-sm-3 wpsp-col-xs-6">
 		<a class="wpsp-colorBox wpsp-yellowbox wpsp-parentsInfo"<?php if($current_user_role == 'parent'  || $current_user_role == 'student'){ }else {?>  href="<?php echo wpsp_admin_url();?>sch-parent" <?php } ?>>
-			<span class="wpsp-colorBox-title"><?php echo apply_filters('wpsp_sidebar_parent_title_menu',esc_html__('Parents','WPSchoolPress')); ?></span>
+			<span class="wpsp-colorBox-title"><?php echo apply_filters('wpsp_sidebar_parent_title_menu',esc_html__('Nurses','WPSchoolPress')); ?></span>
 			<h4 class="wpsp-colorBox-head"><?php echo isset($parentscount->countparents) ?  intval($parentscount->countparents) : 0; ?><sup>+</sup></h4>
 		</a>
 	</div>
 
 	<div class="wpsp-col-sm-3 wpsp-col-xs-6">
 		<a class="wpsp-colorBox wpsp-greenbox wpsp-classInfo" <?php if($current_user_role == 'parent'  || $current_user_role == 'student'){ }else {?> href="<?php echo wpsp_admin_url();?>sch-class" <?php } ?>>
-			<span class="wpsp-colorBox-title"><?php echo apply_filters('wpsp_sidebar_classes_title_menu',esc_html__('Classes','WPSchoolPress'));?></span>
+			<span class="wpsp-colorBox-title"><?php echo apply_filters('wpsp_sidebar_classes_title_menu',esc_html__('Injuries/Sickness','WPSchoolPress'));?></span>
 			<h4 class="wpsp-colorBox-head"><?php echo isset(  $users_count->clcount ) ?  intval($users_count->clcount) : 0; ?><sup>+</sup></h4>
 		</a>
 	</div>
@@ -580,13 +580,9 @@ if( $current_user_role=='administrator' || $current_user_role == 'parent'){?> <d
 			<div class="wpsp-card">
 				<div class="wpsp-card-head">
 					<div class="wpsp-left">
-						<h3 class="wpsp-card-title">Activities Calender</h3>
+						<h3 class="wpsp-card-title">Bookings Calendar</h3>
 					</div>
-					<ul class="wpsp-cards-indicators wpsp-right">
-						<li><span class="wpsp-indic wpsp-blue-indic"></span> Events</li>
-						<li><span class="wpsp-indic wpsp-red-indic"></span> Exams</li>
-						<li><span class="wpsp-indic wpsp-green-indic"></span> Holidays</li>
-					</ul>
+					
 				</div>
 
 				<div class="wpsp-card-body">
