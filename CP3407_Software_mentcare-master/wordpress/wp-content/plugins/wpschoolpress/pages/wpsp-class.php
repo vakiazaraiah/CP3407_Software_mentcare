@@ -36,11 +36,11 @@ wpsp_header();
 					<thead>
 					<tr>
 						<th class="nosort">#</th>
-						<th>Class Number</th>
-						<th>Class Name</th>
-						<th>Teacher Incharge</th>
-						<th>Number of Students</th>
-						<th>Capacity</th>
+						<th>Injury/Sickness Number</th>
+						<th>Injury/Sickness</th>
+						<th>Doctor Incharge</th>
+						<th>Number of patients</th>
+						<th>Patients</th>
 						<th>Location</th>
 						<?php  if( $current_user_role=='administrator' ) { ?> <th class="nosort" align="center">Action</th> <?php } ?>
 					</tr>
