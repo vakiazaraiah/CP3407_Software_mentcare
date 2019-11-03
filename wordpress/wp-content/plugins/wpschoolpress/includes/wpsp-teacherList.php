@@ -720,11 +720,11 @@ $plugins_url=plugins_url();
 
 
 
-						<th> <?php _e( 'Incharge Class', 'WPSchoolPress' );?></th>
+						<th> <?php _e( 'Incharge Ward', 'WPSchoolPress' );?></th>
 
 
 
-						<th> <?php _e( 'Subjects Handling', 'WPSchoolPress' );?></th>								
+						<th> <?php _e( 'Specialised position', 'WPSchoolPress' );?></th>								
 
 
 
@@ -892,11 +892,11 @@ $plugins_url=plugins_url();
 
 
 
-						<th> <?php _e( 'Incharge Class', 'WPSchoolPress' );?></th>
+						<th> <?php _e( 'Incharge Ward', 'WPSchoolPress' );?></th>
 
 
 
-						<th> <?php _e( 'Subjects Handling', 'WPSchoolPress' );?></th>								
+						<th> <?php _e( 'Specialised position', 'WPSchoolPress' );?></th>								
 
 
 

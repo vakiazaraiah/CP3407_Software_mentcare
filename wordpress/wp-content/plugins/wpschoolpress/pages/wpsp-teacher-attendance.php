@@ -12,7 +12,7 @@ wpsp_header();
 			<div class="wpsp-row">
 				<div class="wpsp-col-md-12">
 						<div class="wpsp-card-head">
-							<h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_teacher_attendance_heading_item',esc_html("Teacher Attendance","WPSchoolPress")); ?></h3>
+							<h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_teacher_attendance_heading_item',esc_html("Doctors Attendance","WPSchoolPress")); ?></h3>
 						</div>
 						<div class="wpsp-card-body">
 							<div class="wpsp-row">

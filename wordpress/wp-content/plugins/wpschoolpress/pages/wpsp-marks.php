@@ -39,7 +39,7 @@ if( is_user_logged_in() ) {
 				?>
 				<div class="wpsp-card">
 						<div class="wpsp-card-head">
-								<h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_student_marks_heading_item',esc_html("Students Marks","WPSchoolPress")); ?></h3>
+								<h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_student_marks_heading_item',esc_html("Patient Progression","WPSchoolPress")); ?></h3>
 						</div>
 						 <div class="wpsp-card-body">
 										<?php
@@ -56,7 +56,7 @@ if( is_user_logged_in() ) {
 										              if(isset($item['ClassID'])){
 										                    echo $pl = esc_html($item['ClassID'],"WPSchoolPress");
 										              }else{
-										                  echo $pl = esc_html("Class","WPSchoolPress");
+										                  echo $pl = esc_html("Progression","WPSchoolPress");
 										              }
 										              ?></label>
 																		<select name="ClassID"  id="ClassID" class="wpsp-form-control" required>
@@ -87,7 +87,7 @@ if( is_user_logged_in() ) {
 																						<option value="<?php echo intval($exam->eid);?>" <?php if($exam->eid==$exam_id) echo "selected";?>><?php echo $exam->e_name;?></option>
 																				<?php }
 																		} else { ?>
-																				<option value=""><?php _e( 'Select Exam', 'WPSchoolPress' ); ?> </option>
+																				<option value=""><?php _e( 'Select Progession', 'WPSchoolPress' ); ?> </option>
 																		<?php } ?>
 																</select>
 														</div>
@@ -99,7 +99,7 @@ if( is_user_logged_in() ) {
 																if(isset($item['SubjectID'])){
 																			echo $pl = esc_html($item['SubjectID'],"WPSchoolPress");
 																}else{
-																		echo $pl = esc_html("Subject","WPSchoolPress");
+																		echo $pl = esc_html("Injury/Sickness","WPSchoolPress");
 																}
 																?></label>
 																<?php
@@ -166,9 +166,9 @@ if( is_user_logged_in() ) {
 												?>
 												<div id="mark_entry" class="col-md-12 col-lg-12 col-sm-12">
 														<?php if( $mark_entered ==1 ) { ?>
-																<h3 class="wpsp-card-title"><?php _e( 'Marks Already Entered update here!', 'WPSchoolPress'); ?></h3><br/>
+																<h3 class="wpsp-card-title"><?php _e( 'Progession Already Entered update here!', 'WPSchoolPress'); ?></h3><br/>
 														<?php } else {  ?>
-																<h3 class="wpsp-card-title"><?php _e( 'Enter Marks', 'WPSchoolPress'); ?></h3>
+																<h3 class="wpsp-card-title"><?php _e( 'Enter Progession', 'WPSchoolPress'); ?></h3>
 														<?php } ?>
 														<div class="">
 																<form class="form-horizontal group-border-dashed" id="AddMarkForm" action="" style="border-radius: 0px;" method="post">

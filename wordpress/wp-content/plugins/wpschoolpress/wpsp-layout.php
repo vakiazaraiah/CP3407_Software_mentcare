@@ -41,9 +41,9 @@ function wpsp_topbar(){
   global $current_user, $wpdb, $wpsp_settings_data,$post,$current_user_name;
   $loc_avatar = get_user_meta( $current_user->ID,'simple_local_avatar',true);
   $role   = isset( $current_user->roles[0] ) ? $current_user->roles[0] : '';
-  $url = site_url()."/wp-content/plugins/wpschoolpress/img/wpschoolpresslogo.jpg";
+  $url = site_url()."/wp-content/plugins/wpschoolpress/img/mentcarelogo.png";
   $img_url  = $loc_avatar ? $loc_avatar['full'] : WPSP_PLUGIN_URL.'img/avatar.png';
-  $schoolname = isset( $wpsp_settings_data['sch_name'] ) && !empty( $wpsp_settings_data['sch_name'] ) ? $wpsp_settings_data['sch_name'] : __( 'WPSchoolPress','WPSchoolPress' );
+  $schoolname = isset( $wpsp_settings_data['sch_name'] ) && !empty( $wpsp_settings_data['sch_name'] ) ? $wpsp_settings_data['sch_name'] : __( 'MentCare','MentCare' );
   $imglogo  = isset( $wpsp_settings_data['sch_logo'] ) ? $wpsp_settings_data['sch_logo'] : $url;
   $schoolyear = isset( $wpsp_settings_data['sch_wrkingyear'] ) ? $wpsp_settings_data['sch_wrkingyear'] : '';
   $postname = isset( $post->post_name ) ? $post->post_name :'';
@@ -1116,7 +1116,8 @@ if(isset($_GET['cid'])){
               endif;
               if(($current_user_role=='administrator')):
                 if($result == 'teacherattendance' || $result == 'attendance' || $result == 'marks' || $_GET['tab'] == 'addteacher' || $_GET['tab'] == 'addstudent'  || $_GET['tab'] == 'addparent' || $_GET['tab'] == 'addclass' || $_GET['tab'] == 'addsubject' || $result == 'leavecalendar' || $_GET['tab'] == 'addexam' || $_GET['ac'] == 'add' ||  $result == 'settings' || $result == 'messages'){} else{
-                    echo "<a class='wpsp-btn $current_user_role' href='$addurl'><i class='fa fa-plus-circle'></i> Yur New</a>";
+                  
+                    echo "<a class='wpsp-btn $current_user_role' href='$addurl'><i class='fa fa-plus-circle'></i> Add New</a>";
                 }
               endif;
             endif;
@@ -1136,7 +1137,7 @@ if(isset($_GET['cid'])){
 function wpsp_body_end()
 {
   echo "<footer class='wpsp-footer'>
-        <p>Copyright &copy;".date('Y')." <a href='http://wpschoolpress.com' target='_blank'>WPSchoolPress</a>. All rights reserved. <span class='wpsp-right'>WPSchoolPress Version ".WPSP_PLUGIN_VERSION."</span></p></footer>
+        <p>Copyright &copy;".date('Y')." <a href='' target='_blank'>MentCare</a>. All rights reserved. <span class='wpsp-right'>MentCare Version ".WPSP_PLUGIN_VERSION."</span></p></footer>
     <!-- Control Sidebar -->
     </section><!-- /.wpsp-container -->
   </div><!-- /.wpsp-wrapper -->

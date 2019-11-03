@@ -13,7 +13,7 @@ wpsp_header(); ?>
 		?>
 		<div class="wpsp-card">
 		<div class="wpsp-card-head">
-            <h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_event_heading_item',esc_html("Event calendar","WPSchoolPress")); ?></h3>
+            <h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_event_heading_item',esc_html("Bookings","WPSchoolPress")); ?></h3>
         </div>
          <div class="wpsp-card-body">
 			<div id="calendar"></div>

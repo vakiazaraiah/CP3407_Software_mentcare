@@ -61,10 +61,10 @@ wpsp_header();
 					<thead>
 						<tr>
 							<th class="nosort">#</th>
-							<th>Subject Code</th>
-							<th>Subject Name</th>
-							<th>Faculty</th>
-							<th>Book Name</th>
+							<th>Injury/Sickness Code</th>
+							<th>Injury/Sickness</th>
+							<th>Specialist</th>
+							<th>Injury/Sickness Description</th>
 							<?php if( $current_user_role=='administrator') { ?>
 							<th class="nosort" >Action</th>
 						<?php } ?>
@@ -126,10 +126,10 @@ wpsp_header();
 					<tfoot>
 					  	<tr>
 							<th class="nosort">#</th>
-							<th>Subject Code</th>
-							<th>Subject Name</th>
-							<th>Faculty</th>
-							<th>Book Name</th>
+							<th>Injury/Sickness Code</th>
+							<th>Injury/Sickness Name</th>
+							<th>Specialist</th>
+							<th>Injury/Sickness Description</th>
 							<?php if( $current_user_role=='administrator') { ?>
 							<th class="nosort" >Action</th><?php } ?>
 						</tr>

@@ -27,7 +27,7 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
                 ?>
                 <div class="wpsp-card">
                     <div class="wpsp-card-head">
-                        <h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_leaveclendar_heading_item',esc_html__( 'Generate Leave days for a class', 'WPSchoolPress')); ?></h3>
+                        <h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_leaveclendar_heading_item',esc_html__( 'Generate Leave days', 'WPSchoolPress')); ?></h3>
                     </div>
                     <?php if ($current_user_role == 'administrator') { ?>
                     <div class="wpsp-card-body" id="addLeaveDaysBody">
@@ -154,9 +154,9 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
                         </div>
                         <div class="wpsp-col-md-6">
                             <ul class="wpsp-ulli-list">
-                                <li>Use this form only once for a class to generate all weekly off dates</li>
+                                <li>Use this form only once for a section to generate all weekly off dates</li>
                                 <li>All these dates are excluded for attendance calculation</li>
-                                <li>You can delete any date if you have a school on that date</li>
+                                <li>You can delete any date if you have a work on that date</li>
                                 <li>This is for attendance calculation purpose only</li>
                             </ul>
                         </div>
@@ -172,8 +172,8 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
                                     <table class="wpsp-table" id="wpsp_leave_days" cellspacing="0" width="100%" style="width:100%">
                                         <thead>
                                             <tr>
-                                                <th>Class</th>
-                                                <th>School Year</th>
+                                                <th>Injury/Sickness</th>
+                                                <th>Work Year</th>
                                                 <th>Number of leave days</th>
                                                  <?php  if ($current_user_role == 'administrator'){?>
                                                 <th align="center" class="nosort">Action</th>
@@ -210,8 +210,8 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th>Class</th>
-                                            <th>School Year</th>
+                                            <th>Injury/Sickness</th>
+                                            <th>Work Year</th>
                                             <th>Number of leave days</th>
                                               <?php  if ($current_user_role == 'administrator'){?><th class="nosort">Action</th><?php }?>
                                         </tr>

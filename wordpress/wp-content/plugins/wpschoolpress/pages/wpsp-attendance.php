@@ -12,27 +12,27 @@ wpsp_header();
 		?>
 		<div class="wpsp-card">
 						<div class="wpsp-card-head">
-							<h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_student_attendance_heading_detail', esc_html__( 'Attendance Report', 'WPSchoolPress' )); ?></h3>
+							<h3 class="wpsp-card-title"><?php echo apply_filters( 'wpsp_student_attendance_heading_detail', esc_html__( 'Appointment Report', 'WPSchoolPress' )); ?></h3>
 							<hr>
 						</div>
 						<div class="wpsp-card-body text-black">
 							<div class="wpsp-row">
 								<?php
-								$item =  apply_filters( 'wpsp_student_attendance_title_item',esc_html("Attendance","WPSchoolPress"));
+								$item =  apply_filters( 'wpsp_student_attendance_title_item',esc_html("Appointment","WPSchoolPress"));
 								?>
 							<div class="wpsp-col-lg-5 wpsp-col-md-5 wpsp-col-sm-12 wpsp-col-xs-12" id="AttendanceEnterForm">
-							<h3 class="wpsp-card-title">Attendance</h3>
+							<h3 class="wpsp-card-title">Appointment</h3>
 							<div class="line_box">
 									<div class="wpsp-form-group">
 										<label for="Class">
 											<?php if( isset($item['classid'])){
 														echo esc_html($item['classid'],"WPSchoolPress");
 											}else{
-													echo esc_html("Select Class","WPSchoolPress");
+													echo esc_html("Select Sickness/Injury","WPSchoolPress");
 											}
 											?> </label>
 											<select name="classid" id="AttendanceClass" class="wpsp-form-control">
-												<option value="">Select Class</option>
+												<option value="">Select Sickness/Injury</option>
 													<?php
 													if(isset($_POST['classid']) && intval($_POST['classid'])!='')
 														$selid=intval($_POST['classid']);
@@ -141,7 +141,7 @@ foreach ($stl as $key => $value) {
 								}
 								?>
 								<div class="wpsp-col-sm-12">
-									<h3 class="wpsp-card-title">View Attendance Report</h3>
+									<h3 class="wpsp-card-title">View Appointment Report</h3>
 									<div class="line_box">
 										<div class="box-body">
 											<?php

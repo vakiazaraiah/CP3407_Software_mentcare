@@ -47,7 +47,7 @@ wpsp_header();
 			?>
 	     <div class="wpsp-card">
 			<div class="wpsp-card-head">
-        <h3 class="wpsp-card-title">Teacher's Details </h3>
+        <h3 class="wpsp-card-title">Doctor's Details </h3>
       </div>
 			<div class="wpsp-card-body">
 					<table id="teacher_table" class="wpsp-table">
@@ -55,8 +55,8 @@ wpsp_header();
 						<tr>
 							<th class="nosort">#</th>
 							<th><?php _e( 'Full Name', 'WPSchoolPress' ); ?></th>
-							<th><?php _e( 'Incharge of Class', 'WPSchoolPress' ); ?></th>
-							<th><?php _e( 'Subjects Handling', 'WPSchoolPress' ); ?></th>
+							<th><?php _e( 'Incharge of Injury/Sickness', 'WPSchoolPress' ); ?></th>
+							<th><?php _e( 'Ward Incharge', 'WPSchoolPress' ); ?></th>
 							<th><?php _e( 'Phone', 'WPSchoolPress' ); ?></th>
 						</tr>
 						</thead>

@@ -265,7 +265,7 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
                             <div class="wpsp-card-body">
                             <form name="working_hour" method="post" action="">
                                 <div class="wpsp-form-group">
-                                            <h3 class="wpsp-card-title"><?php echo apply_filters('wpsp_workinghours_heading_item',esc_html__( 'Class hours', 'WPSchoolPress'));?></h3>
+                                            <h3 class="wpsp-card-title"><?php echo apply_filters('wpsp_workinghours_heading_item',esc_html__( 'Injury/Sickness hours', 'WPSchoolPress'));?></h3>
                                         </div>
                                             <div class="wpsp-row">
                                               <?php
@@ -278,7 +278,7 @@ if (!defined( 'ABSPATH' ) )exit('No Such File');
                                                           if(isset($item['hname'])){
                                                                $pl = esc_html($item['hname'],"WPSchoolPress");
                                                           }else{
-                                                              $pl = esc_html("Class Hour Name","WPSchoolPress");
+                                                              $pl = esc_html("Injury/Sickness Hour Name","WPSchoolPress");
                                                           }
                                                       ?>
                                                         <label class="wpsp-label"><?php echo $pl; ?></label>
